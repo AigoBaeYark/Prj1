@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>jstl1.jsp</h2>
+
+	<%-- <c:forTokens items="이름1, 이름1, 이름1, 이름1, 이름1" delims=",">
+		반복 <br />
+	</c:forTokens> --%>
+	
+	<%-- <c:forTokens var = "name" items="이름1, 이름2, 이름3, 이름4, 이름5" delims=",">
+		${name } <br />
+	</c:forTokens>--%>
+	
+	<%-- <c:forTokens var = "name" items="이름1, 이름2, 이름3, 이름4, 이름5" delims="," varStatus="st">
+		<!-- var = "이름" items = "내용물1, 내용물2, ..." delims = "아이템구분부호" varStatus = "var의 상태(여기다 이름)" --> 
+		var - > items들이 들어갈 곳
+		items -> 내용물 여러개 가능
+		delims -> 내용물 구분자 ,  | . / 등등
+		varStatus ->
+		
+		index:${st.index } <br />
+		current:${st.current } <br />
+		count:${st.count } <br />
+		first:${st.first } <br />
+		last:${st.last } <br />
+		begin:${st.begin } <br />
+		end:${st.end } <br />
+		step:${st.step } <br />
+		<hr />
+	</c:forTokens> --%>
+	
+	<%-- <c:forTokens var = "name" items="이름1, 이름2, 이름3, 이름4, 이름5" delims="," varStatus="st" 
+	begin="1" end="3" step="2">
+		<!-- var = "이름" items = "내용물1, 내용물2, ..." delims = "아이템구분부호" varStatus = "var의 상태(여기다 이름)" --> 
+	
+		index:${st.index } <br />
+		current:${st.current } <br />
+		count:${st.count } <br />
+		first:${st.first } <br />
+		last:${st.last } <br />
+		begin:${st.begin } <br />
+		end:${st.end } <br />
+		step:${st.step } <br />
+		<hr />
+	</c:forTokens>  --%>
+	
+	
+	<%-- <c:forTokens var = "name" items="이름1/20, 이름2/21, 이름3/22, 이름4/23, 이름5/24" delims=",/" varStatus="st" >
+	
+		index:${st.index } <br />
+		current:${st.current } <br />
+		count:${st.count } <br />
+		first:${st.first } <br />
+		last:${st.last } <br />
+		begin:${st.begin } <br />
+		end:${st.end } <br />
+		step:${st.step } <br />
+		<hr />
+	</c:forTokens>  --%>
+	
+	<c:forTokens var = "name" items="이름1/20, 이름2/21, 이름3/22, 이름4/23, 이름5/24" delims=",/" varStatus="st" step="2">
+	
+		index:${st.index } <br />
+		current:${st.current } <br />
+		count:${st.count } <br />
+		first:${st.first } <br />
+		last:${st.last } <br />
+		begin:${st.begin } <br />
+		end:${st.end } <br />
+		step:${st.step } <br />
+		<hr />
+	</c:forTokens> 
+	
+
+</body>
+</html>
